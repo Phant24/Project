@@ -10,43 +10,43 @@ int main()
 
 	char typ;
 	unsigned long int chislo1 = 0, chislo2 = 0, result = 0;
-	//переводимо в 10-тичну систему 
-	cout << "Введіть перше число" << endl;
+	//РїРµСЂРµРІРѕРґРёРјРѕ РІ 10-С‚РёС‡РЅСѓ СЃРёСЃС‚РµРјСѓ 
+	cout << "Р’РІРµРґС–С‚СЊ РїРµСЂС€Рµ С‡РёСЃР»Рѕ" << endl;
 	cin >> hex >> chislo1;
 	cout << dec << chislo1 << endl;
-	cout << "Введіть друге число" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РґСЂСѓРіРµ С‡РёСЃР»Рѕ" << endl;
 	cin >> hex >> chislo2;
 	cout << dec << chislo2 << endl;
-	//вибираємо дію між числами
-	cout << "Choose: A-додавання, B-віднімання, C-множення, D-ділення" << endl; cin >> typ;
+	//РІРёР±РёСЂР°С”РјРѕ РґС–СЋ РјС–Р¶ С‡РёСЃР»Р°РјРё
+	cout << "Choose: A-РґРѕРґР°РІР°РЅРЅСЏ, B-РІС–РґРЅС–РјР°РЅРЅСЏ, C-РјРЅРѕР¶РµРЅРЅСЏ, D-РґС–Р»РµРЅРЅСЏ" << endl; cin >> typ;
 
 	switch (typ)
 	{
 	case 'A':
-		cout << "Додавання" << endl;
-		result = chislo1 + chislo2;		//розрахунок в 10-тичній системі
-		cout << hex << result << endl;	 //переводимо в 16-кову систему
+		cout << "Р”РѕРґР°РІР°РЅРЅСЏ" << endl;
+		result = chislo1 + chislo2;		//СЂРѕР·СЂР°С…СѓРЅРѕРє РІ 10-С‚РёС‡РЅС–Р№ СЃРёСЃС‚РµРјС–
+		cout << hex << result << endl;	 //РїРµСЂРµРІРѕРґРёРјРѕ РІ 16-РєРѕРІСѓ СЃРёСЃС‚РµРјСѓ
 		break;
 	case 'B':
-		cout << "Віднімання" << endl;
+		cout << "Р’С–РґРЅС–РјР°РЅРЅСЏ" << endl;
 		result = chislo1 - chislo2;
 		cout << hex << result << endl;
 		break;
 
 	case'C':
-		cout << "Множення" << endl;
+		cout << "РњРЅРѕР¶РµРЅРЅСЏ" << endl;
 		result = chislo1 * chislo2;
 		cout << hex << result << endl;
 		break;
 
 	case'D':
-		cout << "Ділення" << endl;
+		cout << "Р”С–Р»РµРЅРЅСЏ" << endl;
 		result = chislo1 / chislo2;
 		cout << hex << result << endl;
 		break;
 
 	default:
-		cout << "Не вірно введенно тип дії" << endl;
+		cout << "РќРµ РІС–СЂРЅРѕ РІРІРµРґРµРЅРЅРѕ С‚РёРї РґС–С—" << endl;
 		break;
 	}
 	system("pause");
