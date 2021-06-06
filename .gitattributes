@@ -2,7 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
-
+**.** text working-tree-encoding=Windows-1251
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
