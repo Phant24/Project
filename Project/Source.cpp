@@ -1,54 +1,146 @@
-#include<iomanip>
-#include<iostream>
-#include <Windows.h>
-using namespace std;
+#include<iomanip> 
+#include<iostream> 
+#include <Windows.h> 
+ 
 
-int main()
-{
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+using namespace std; 
 
-	char typ;
-	unsigned long int chislo1 = 0, chislo2 = 0, result = 0;
-	//переводимо в 10-тичну систему 
-	cout << "Введіть перше число" << endl;
-	cin >> hex >> chislo1;
-	cout << dec << chislo1 << endl;
-	cout << "Введіть друге число" << endl;
-	cin >> hex >> chislo2;
-	cout << dec << chislo2 << endl;
-	//вибираємо дію між числами
-	cout << "Choose: A-додавання, B-віднімання, C-множення, D-ділення" << endl; cin >> typ;
 
-	switch (typ)
-	{
-	case 'A':
-		cout << "Додавання" << endl;
-		result = chislo1 + chislo2;		//розрахунок в 10-тичній системі
-		cout << hex << result << endl;	 //переводимо в 16-кову систему
-		break;
-	case 'B':
-		cout << "Віднімання" << endl;
-		result = chislo1 - chislo2;
-		cout << hex << result << endl;
-		break;
+int main() 
 
-	case'C':
-		cout << "Множення" << endl;
-		result = chislo1 * chislo2;
-		cout << hex << result << endl;
-		break;
+{ 
 
-	case'D':
-		cout << "Ділення" << endl;
-		result = chislo1 / chislo2;
-		cout << hex << result << endl;
-		break;
+SetConsoleCP(1251); 
+SetConsoleOutputCP(1251); 
 
-	default:
-		cout << "Не вірно введенно тип дії" << endl;
-		break;
-	}
-	system("pause");
-}
+ 
 
+int typ,start; 
+
+unsigned  int chislo1 = 0, chislo2 = 0, result = 0; 
+
+start: 
+
+cout << "Запустити калькулятор?" << endl; 
+
+cout << "1 -так , 2 - ні" << endl; 
+
+cin >> start; 
+
+switch (start) 
+
+{ 
+
+case 1: 
+
+cout << "Калькулятор запущений" << endl; 
+
+cout << "		Калькулятор шістнадцяткової системи числення	" << endl; 
+
+ 
+
+   cout << "Введіть перше число в шістнадцятковій системі числення(0-9,a-f)" << endl; 
+
+cin >> hex >> chislo1; 
+
+ 
+
+cout << "Введіть друге число  в шістнадцятковій системі числення(0-9,a-f)" << endl; 
+
+cin >> hex >> chislo2; 
+
+start1: 
+
+ 
+
+cout << "Виберіть:	1 - додавання, 2 - віднімання, 3 - множення, 4 - ділення" << endl; cin >> typ; 
+
+  
+
+switch (typ) 
+
+{ 
+
+case 1: 
+
+cout << "Додавання" << endl; 
+
+result = chislo1 + chislo2; 
+
+cout << hex << result << endl; 
+
+break; 
+
+case 2: 
+
+cout << "Віднімання" << endl; 
+
+result = chislo1 - chislo2; 
+
+cout << hex << result << endl; 
+
+break; 
+
+ 
+
+case 3: 
+
+cout << "Множення" << endl; 
+
+result = chislo1 * chislo2; 
+
+cout << hex << result << endl; 
+
+break; 
+
+
+
+case 4: 
+
+cout << "Ділення" << endl; 
+
+result = chislo1 / chislo2; 
+
+cout << hex << result << endl; 
+
+break; 
+
+ 
+
+default: 
+
+cout << "Не вірно введенно тип дії" << endl; 
+
+cout << "Введіть ще раз" << endl; 
+
+goto start1; 
+
+break; 
+
+} 
+
+ 
+
+case 2: 
+
+cout << "Ви вирішили не запускати калькулятор :(" << endl; 
+
+break; 
+
+default: 
+
+cout<<"Введено не правильно"<<endl; 
+
+goto start; 
+
+break; 
+
+} 
+
+ 
+
+system("pause"); 
+
+return 0; 
+
+} 
